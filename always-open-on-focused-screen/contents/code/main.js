@@ -30,7 +30,7 @@ workspace.clientActivated.connect(window => {
 });
 
 // when a window is added
-workspace.clientAdded.connect(window => {
+workspace.windowAdded.connect(window => {
     debug("window", JSON.stringify(window, undefined, 2));
 
     // abort conditions
@@ -47,8 +47,8 @@ workspace.clientAdded.connect(window => {
   
     // clip and move window into bounds of screen dimensions
     const area = workspace.clientArea(KWin.MaximizeArea, window);
-    window.geometry.width = Math.min(area.width, window.width);
-    window.geometry.height = Math.min(area.height, window.height);
-    window.geometry.x = Math.max(area.x, Math.min(area.x + area.width - window.width, window.x));
-    window.geometry.y = Math.max(area.y, Math.min(area.y + area.height - window.height, window.y));
+    window.frameGeometry.width = Math.min(area.width, window.width);
+    window.frameGeometry.height = Math.min(area.height, window.height);
+    window.frameGeometry.x = Math.max(area.x, Math.min(area.x + area.width - window.width, window.x));
+    window.frameGeometry.y = Math.max(area.y, Math.min(area.y + area.height - window.height, window.y));
 });

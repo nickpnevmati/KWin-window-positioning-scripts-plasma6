@@ -34,7 +34,7 @@
                     </property>
                     <widget class="QRadioButton" name="kcfg_allowMode">
                         <property name="text">
-                            <string notr="true">all except the follwing</string>
+                            <string notr="true">All except the following</string>
                         </property>
                         <attribute name="buttonGroup">
                             <string notr="true">matchTypeGroup</string>
@@ -42,7 +42,7 @@
                     </widget>
                     <widget class="QRadioButton" name="kcfg_denyMode">
                         <property name="text">
-                            <string notr="true">none except the following</string>
+                            <string notr="true">None except the following</string>
                         </property>
                         <attribute name="buttonGroup">
                             <string notr="true">matchTypeGroup</string>

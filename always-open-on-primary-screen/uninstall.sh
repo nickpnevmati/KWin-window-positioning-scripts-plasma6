@@ -1,3 +1,3 @@
 #!/bin/bash
-kpackagetool5 --type=KWin/Script --remove .
-qdbus org.kde.KWin /KWin reconfigure
+kpackagetool6 --type=KWin/Script --remove .
+qdbus6 org.kde.KWin /KWin reconfigure

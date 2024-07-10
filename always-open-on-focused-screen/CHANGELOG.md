@@ -1,3 +1,7 @@
+## v5.0-plasma6
+- updated for plasma6
+- minor UI changes & typo fix
+
 # v5.0
 - fix include/exlude list not working correctly
 - port to JSON format for metadata

@@ -33,14 +33,4 @@ zip -rq "${name}"'_v'"${version}"'.kwinscript'  \
 	LICENSE
 echo 'generated kwinscript package'
 
-# commit changes to GitHub
-git add .
-git commit -q -m "$(paste -sd '; ' CHANGELOG.txt | sed 's/- / /g')"
-git push -q
-echo 'commited changes to git'
-
-# generate GitHub release
-gh release create "${name}"'_v'"${version}" -F CHANGELOG.txt "${name}"'_v'"${version}"'.kwinscript'
-echo 'generated GitHub release'
-
 echo 'done'
